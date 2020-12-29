@@ -48,7 +48,76 @@ https://www.pluralsight.com/
      * Handle complex conditionals ( multiple conditionals) by use of intermediate variables
      * Encapsulate complex conditionals by extracting code into another method
      * Prefer Polymorphism over enums in switch statement  -- redundant codes
-     * Be declarativ; sometimes Linq-to-objects provides more expressive codes thah ad hoc procedural lengthy codes
+     * Be declarative; sometimes Linq-to-objects provides more expressive codes thah your ad-hoc procedural lengthy codes
      * Table driven methods
           * Avoid hard coding value that changes; save it in the db
           * It is great for dynamic logic, allows changes without code deployment, avoids complex data structure, helps avoid hardcoding, and less codes
+
+
+* ##### Writing clean methods
+     * Create methods to: 
+        * avoid duplication
+        * Excessive Indentation [BIG WARNING!!!]  look out for deep nesting arrow chane codes. 
+        * Convey Intent
+     * Prevent Excessive Indentation by:
+        * Extract methods when required like footnotes
+        * Always fail fast: Usually using gaurd clauses or default like in case of switch statement
+        * Return early
+        * Convey Intent 
+        * Do ONE thing ONLY!!
+     * Mayfly Variable
+         * In methods, try to declare varibale close to the first use: allows for better readabiltiy!!
+     * Strive for 0-3 parameters
+         * Remember the "RULE OF 7"
+     * Watch out for bool paramters or flag arguments
+         * It might be a strong sign a function is trying to do too many things
+     * Avoid long methods. Watch out for signs such as 
+         * Lots of Whitespaces and comments
+         * Scrolling required
+         * Difficulty coming up with consise method Names
+         * multiple conditionals
+         * multiple layer of abstractions
+         * "Rarely over 20 lines; Rarely over 3 parameters" -- things to consider
+         * "Simple functons can be longer. Complex function should be short." -- YES!!
+     * Only catch exceptions that you can handle; sometimes swallowing exception is OK (rare ocassions!)
+  
+* ##### Writing clean Classes
+    * Class responsibility should be strongly related
+    * Kepp Class names specific and descriptive
+         * Class with broad and generic names often grow quickly 
+    * Watch out for standalone methods
+    * Watch out for classes that changes too often 
+         * Sometimes if a particular class is getting too much commits, maybe it is a sign that it is doing too much
+    * Avoid low cohesion and Keep high cohesion
+    * Classes too small -- rare scenario
+         * If two classes realy heavily on each other or call a lot of each others method. maybe it is a sign that these can be merged into one class 
+    * Group related data into a class
+         * private void SaveUser(string firstName, string lastName, string State, string zip, string eyeColor, string phone, string fax, string maidenName) -- BAD!!
+         * private void saveUser(User user) -- MUCH BETTER!!  --- RULE OF 7
+ 
+* ##### Clean Comments:
+    * Over reliance on comments might be a sign of a CODE SMELL!
+    * Always pprefer Expressive Codes over Comments"
+    * Comments to avoid
+         * Redundant comments
+         * Intent comments
+         * Apology or warning comments
+         * Divider Comments -- maybe REFACTOR!!
+         * Brace Tracker Comments -- commonly used to mark end of long blocks -- maybe REFACTOR!!
+         * Bloated header and Defect Log Comments -- not so necessary -- that informations saved somewhere else
+         * ZOMBIE Codes!! --  commented out bulk codes like these increase ambiguity, and also affects searcher and refactoring!
+    * Clean Comments
+         * To Do
+         * Summary
+         * Documentation
+         
+* ##### REFACTORING!!
+    * When to refactor?
+         * refactor only codes that you are currently working on
+         * If it aint broke, dont <s>fix</s> refactor it. 
+         * useful when you find that the code you are editing or working on is difficult to comprehend or change
+    * Add tests for regression protection --THIS HELPS!! to make sure that your refactoring broke NOTHING!!
+
+Robert C. Martin said:
+
+> Leave the code you're editing a little better than you found it
