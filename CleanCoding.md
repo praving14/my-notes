@@ -36,3 +36,19 @@ https://www.pluralsight.com/
         * boolean should answer true false question as in open => isOpen or status => isActive
         * strive for symmentry for related values; symmetrical on/disable => on/off
 * ##### Write conditionals that conveys intent
+     * Compare booleans implicity;   if(loggedIn === true)  => if(loggedIn)
+     * Assign boolean values exlicitly;   bool goingToWatchAMovie = cashInWallet > 50.00;    
+     * Prefer positive conditionals;  if(!isNotLoggedIn)  => if (loggedIn)
+     * Ternaries are beautiful; int ticketFee = isMale ? 0 : 50
+     * Be Strongly Typed not "Stringly" typed
+          * if(employeeType == 'Manager') => if (employeeType == EmployeeType.Manager) -- use enums when necessary
+     * Avoid magic Number
+          * if ( age > 65)   =>  const int retirementAge = 65; if(age < retirementAge);
+          * if ( status == 2)  => if(status == status.ACTIVE) 
+     * Handle complex conditionals ( multiple conditionals) by use of intermediate variables
+     * Encapsulate complex conditionals by extracting code into another method
+     * Prefer Polymorphism over enums in switch statement  -- redundant codes
+     * Be declarativ; sometimes Linq-to-objects provides more expressive codes thah ad hoc procedural lengthy codes
+     * Table driven methods
+          * Avoid hard coding value that changes; save it in the db
+          * It is great for dynamic logic, allows changes without code deployment, avoids complex data structure, helps avoid hardcoding, and less codes
