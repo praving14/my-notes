@@ -18,7 +18,7 @@ https://www.pluralsight.com/
         * "DRY Principle": Don't Repeat Yourself
                -- Copy and Past is often a sign of a design problem
 * ##### Try to make your code self documenting so that comments becomes more of an additional resource than a necessity
-    *  #### "understanding he original programmer's intent is the most difficult problem. - Fjelstad & Hamlen 1979"
+    *  #### "understanding the original programmer's intent is the most difficult problem. - Fjelstad & Hamlen 1979"
     * Self Documenting Code will have:
        * Clear Intent of what it meant to do
        * Layers of abstraction so that you can walk thorugh your code at different level of details as required
@@ -27,10 +27,10 @@ https://www.pluralsight.com/
        
 * ##### Naming
     * Class: 
-       * the name be self-descriptive and self explanatory
+       * the name should be self-descriptive and self explanatory
     * Methods:     
        * With a good method name, a reader does not have to read the method to know what it does.
-       * Avoid name warning Signs such as 'And' or  'If' or  'Or'. It is sign that you are trying to do more than one thing in your method. May be you should consider splitting it into multiple methods. 
+       * Avoid name warning signs such as 'And' or  'If' or  'Or'. This might be a sign that you are trying to do more than one thing in your method. May be you should consider splitting it into multiple methods. 
        * Avoid non-standard abbreviations
      * variables:
         * boolean should answer true false question as in open => isOpen or status => isActive
@@ -57,14 +57,14 @@ https://www.pluralsight.com/
 * ##### Writing clean methods
      * Create methods to: 
         * avoid duplication
-        * Excessive Indentation [BIG WARNING!!!]  look out for deep nesting arrow chane codes. 
+        * Excessive Indentation [BIG WARNING!!!]  look out for deep nesting arrow chain codes. 
         * Convey Intent
      * Prevent Excessive Indentation by:
-        * Extract methods when required like footnotes
-        * Always fail fast: Usually using gaurd clauses or default like in case of switch statement
-        * Return early
-        * Convey Intent 
-        * Do ONE thing ONLY!!
+        * Extracting methods when required like footnotes
+        * Always failing fast: Usually using gaurd clauses or default like in case of switch statement
+        * Returning early
+        * Conveying Intent 
+        * Doing ONE and ONE thing ONLY!!
      * Mayfly Variable
          * In methods, try to declare varibale close to the first use: allows for better readabiltiy!!
      * Strive for 0-3 parameters
@@ -114,9 +114,9 @@ https://www.pluralsight.com/
 * ##### REFACTORING!!
     * When to refactor?
          * refactor only codes that you are currently working on
-         * If it aint broke, dont <s>fix</s> refactor it. 
-         * useful when you find that the code you are editing or working on is difficult to comprehend or change
-    * Add tests for regression protection --THIS HELPS!! to make sure that your refactoring broke NOTHING!!
+         * If it ain't broke, dont <s>fix</s> or refactor it. 
+         * Useful when you find that the code you are editing or working on is difficult to comprehend or change
+    * Add tests for regression protection --THIS HELPS!! to make sure that your refactoring did not break ANYTHING!!
 
 Robert C. Martin said:
 
