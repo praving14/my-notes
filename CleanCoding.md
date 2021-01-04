@@ -2,7 +2,7 @@
  
 ## Clean Coding Principles in C#
  - By Cory House 
-https://www.pluralsight.com/
+https://app.pluralsight.com/library/courses/csharp-clean-coding-principles/table-of-contents
 
 #### Key points learnt from this course:
 * ##### Make sure you have the right tool for the job
